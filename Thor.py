@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 print(" ______________________         _____________________                                          ")
 print("|                 |    |       |             |  ___  |  + VIP password list maker          ")
 print("|                 |    |       |    _____    | |___| |                                         ")
@@ -19,6 +21,9 @@ print("3) intiger and string : like (1277john,123juice,21290019029jack etc) ")
 print("")
 print("4) string intiger string : (12324*12*21221*21212)")
 print("")
+print("5) Special Charater mix : like(! @ & * john)")
+print("")
+ 
 select2 = int(input("Enter the your selected number >>>>> "))
 print("") 
 
@@ -27,7 +32,7 @@ if (select2== 1):
     print("")
     print("type your max number?  example(1000,9000,100,10,10000000)")
     print("")
-    f = open("pass.txt","w+")
+    f = open("pass.txt","a+")
     selected_int = int(input("Type here >>> "))
     for i in range(0,selected_int):
         f.write("%d\r\n"%(i))
@@ -41,7 +46,7 @@ if (select2 == 2):
     print("")
     selected_int2 = int(input("type your number range >>> "))
     print("")
-    f = open("pass.txt","w+")            
+    f = open("pass.txt","a+")            
     for n in range(0,selected_int2):
         f.write("%s%d\r\n" % (selected_str2,n))
     f.close()
@@ -53,7 +58,7 @@ if (select2 == 3):
     print("")
     selected_str3 = raw_input("type your after text >>> ")
     print("")
-    f = open("pass.txt","w+")        
+    f = open("pass.txt","a+")        
     for x in range(0,selected_int3):
         f.write("%d%s\r\n" % (x,selected_str3))
     f.close()
@@ -62,10 +67,19 @@ if (select2 == 4):
     string4 = raw_input("type the pre text >>> ")
     intiger4 = int(input("inter the justify intiger range number >>> "))
     string5 = raw_input("enter the end text >>> ")
-    f = open("pass.txt","w+")         
+    f = open("pass.txt","a+")         
     for d in range(0,intiger4):
         f.write("%s%d%s\r\n" % (string4,d,string5))
     f.close()
+
+if (select2 == 5):
+    string6 = raw_input("Enter the Special character : '! @ $ % *' that appears before the text >>> ")
+    string7 = raw_input("Eneter a secret String >>> ")
+    string8 = raw_input("Enter the Special Charachter : '! @ $ % *' hat follows the text >>> ")
+    integer5 = int(input("Enter the number of words to be generated (count should be within 10) >>> "))
+    f = open("pass.txt","a+")
+    for d in range(1,integer5):
+        f.write("%s%s%s\r\n" % (d*string6,string7,d*string8))
 
 print("""
 
