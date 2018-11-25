@@ -2,7 +2,7 @@ print(" ______________________         _____________________                    
 print("|                 |    |       |             |  ___  |  + VIP password list maker          ")
 print("|                 |    |       |    _____    | |___| |                                         ")
 print("|_____|     |_____|    |_______|   |     |   |     __|                                         ")
-print("      |     |     |            |   |     |   |     \     + script by Bishop kurd python coder  ")
+print("      |     |     |            |   |     |   |     \     + script by E-RROR                    ")
 print("      |     |     |            |   |_____|   |   _  \                                          ")
 print("      |     |     |     _____  |             |  | |  \                                         ")
 print("      |_____|     |____|     |_|_____________|__| |___\   + thanks for download                ")
@@ -41,7 +41,7 @@ if (select2 == 2):
     print("")
     selected_int2 = int(input("type your number range >>> "))
     print("")
-    f = open("pass.txt","w+")            
+    f = open("%s.txt","w+"%(selected_str2))            
     for n in range(0,selected_int2):
         f.write("%s%d\r\n" % (selected_str2,n))
     f.close()
@@ -53,7 +53,7 @@ if (select2 == 3):
     print("")
     selected_str3 = raw_input("type your after text >>> ")
     print("")
-    f = open("pass.txt","w+")        
+    f = open("$s.txt","w+"%(selected_str3))        
     for x in range(0,selected_int3):
         f.write("%d%s\r\n" % (x,selected_str3))
     f.close()
@@ -62,7 +62,7 @@ if (select2 == 4):
     string4 = raw_input("type the pre text >>> ")
     intiger4 = int(input("inter the justify intiger range number >>> "))
     string5 = raw_input("enter the end text >>> ")
-    f = open("pass.txt","w+")         
+    f = open("%s.txt","w+"%(string4))         
     for d in range(0,intiger4):
         f.write("%s%d%s\r\n" % (string4,d,string5))
     f.close()
